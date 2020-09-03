@@ -10,6 +10,12 @@
 
     <color name="softblue">#03A9F4</color>
 
+    <color name="red">#FF0000</color>
+    <color name="background_color">#ececec</color>
+    <color name="appblue">#007bff</color>
+    <color name="spinner_blue">#add8e6</color>
+    <color name="spinner_border">#c5d4f1</color>
+
 
 
 </resources>

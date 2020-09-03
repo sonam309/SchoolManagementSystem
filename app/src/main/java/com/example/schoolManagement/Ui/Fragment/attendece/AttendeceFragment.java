@@ -1,4 +1,4 @@
-package com.example.schoolManagement.Ui.Fragment;
+package com.example.schoolManagement.Ui.Fragment.attendece;
 
 import android.content.Context;
 import android.os.Bundle;

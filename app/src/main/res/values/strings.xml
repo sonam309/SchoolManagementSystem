@@ -33,4 +33,7 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="select_class">Select Class</string>
+    <string name="attendece_date">Attendence Date</string>
+    <string name="view">View</string>
 </resources>

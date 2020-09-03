@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -21,7 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.schoolManagement.R;
-import com.example.schoolManagement.Ui.Fragment.AttendeceFragment;
+import com.example.schoolManagement.Ui.Fragment.attendece.AttendeceFragment;
 import com.example.schoolManagement.Ui.Fragment.DashboardFragment;
 import com.example.schoolManagement.utility.KeyClass;
 import com.google.android.material.navigation.NavigationView;
@@ -34,9 +33,9 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     private ActionBarDrawerToggle toggleButton;
     private DrawerLayout drawer_layout;
     private Toolbar toolbar;
-    private RelativeLayout nav_menue_dashboard_rl,navigation_My_Profile_rl,navigation_institute_profile_rl,navigation_notifications_rl,
-            navigation_fee_setup_rl,navigation_holiday_list_rl,navigation_Schedule_rl,navigation_approvals_rl,navigation_attendece_rl,
-            navigation_class_student_rl,navigation_examinations_rl;
+    private RelativeLayout nav_menue_dashboard_rl, navigation_My_Profile_rl, navigation_institute_profile_rl, navigation_notifications_rl,
+            navigation_fee_setup_rl, navigation_holiday_list_rl, navigation_Schedule_rl, navigation_approvals_rl, navigation_attendece_rl,
+            navigation_class_student_rl, navigation_examinations_rl;
     private ImageView close_iv;
 
 
@@ -70,17 +69,17 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
 
         //Relative Layout
-        nav_menue_dashboard_rl=findViewById(R.id.nav_menue_dashboard_rl);
-        navigation_My_Profile_rl=findViewById(R.id.navigation_My_Profile_rl);
-        navigation_institute_profile_rl=findViewById(R.id.navigation_institute_profile_rl);
-        navigation_notifications_rl=findViewById(R.id.navigation_notifications_rl);
-        navigation_fee_setup_rl=findViewById(R.id.navigation_fee_setup_rl);
-        navigation_holiday_list_rl=findViewById(R.id.navigation_holiday_list_rl);
-        navigation_Schedule_rl=findViewById(R.id.navigation_Schedule_rl);
-        navigation_approvals_rl=findViewById(R.id.navigation_approvals_rl);
-        navigation_attendece_rl=findViewById(R.id.navigation_attendece_rl);
-        navigation_class_student_rl=findViewById(R.id.navigation_class_student_rl);
-        navigation_examinations_rl=findViewById(R.id.navigation_examinations_rl);
+        nav_menue_dashboard_rl = findViewById(R.id.nav_menue_dashboard_rl);
+        navigation_My_Profile_rl = findViewById(R.id.navigation_My_Profile_rl);
+        navigation_institute_profile_rl = findViewById(R.id.navigation_institute_profile_rl);
+        navigation_notifications_rl = findViewById(R.id.navigation_notifications_rl);
+        navigation_fee_setup_rl = findViewById(R.id.navigation_fee_setup_rl);
+        navigation_holiday_list_rl = findViewById(R.id.navigation_holiday_list_rl);
+        navigation_Schedule_rl = findViewById(R.id.navigation_Schedule_rl);
+        navigation_approvals_rl = findViewById(R.id.navigation_approvals_rl);
+        navigation_attendece_rl = findViewById(R.id.navigation_attendece_rl);
+        navigation_class_student_rl = findViewById(R.id.navigation_class_student_rl);
+        navigation_examinations_rl = findViewById(R.id.navigation_examinations_rl);
 
     }
 
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //switchFragment
-        replaceFragment(new DashboardFragment(),false,KeyClass.FRAGMENT_DASHBORD,KeyClass.FRAGMENT_DASHBORD);
+        replaceFragment(new AttendeceFragment(), false, KeyClass.FRAGMENT_ATTENDENCE, KeyClass.FRAGMENT_ATTENDENCE);
 
         //RelativeLayout On click
         nav_menue_dashboard_rl.setOnClickListener(this);
@@ -120,10 +119,9 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         getSupportActionBar().setTitle(null);
 
 
-
     }
 
-//    Switch Fragment Method
+    //    Switch Fragment Method
     public void replaceFragment(Fragment fragment, boolean addToBackStack, String transactionName, String tag) {
         try {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -138,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         }
 
     }
-
 
 
     @Override
@@ -217,8 +214,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     }
 
 
-
-    public void closemethod(String msg){
+    public void closemethod(String msg) {
 
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         drawer_layout.closeDrawer(GravityCompat.START);
@@ -293,4 +289,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
         return true;
     }
+
+
 }

@@ -1,13 +1,195 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.schoolManagement.Ui.Fragment.AttendeceFragment">
+    android:background="@color/background_color"
+    tools:context="com.example.schoolManagement.Ui.Fragment.attendece.AttendeceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp4"
+        app:cardElevation="@dimen/dp10"
+        app:cardUseCompatPadding="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp150"
+            android:background="@drawable/side_nav_bar" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@+id/headder"
+        android:layout_margin="@dimen/dp10"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/dp10"
+        app:cardElevation="@dimen/dp4"
+        app:cardUseCompatPadding="true">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dp120"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/select_class_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_select_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/select_class"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/validation_ic1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_toRightOf="@+id/txt_select_class"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp25" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/validation_ic1"
+                    android:background="@drawable/rounded_corner_spinner_layout"
+
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinner_select_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:id="@+id/image_drop_down1"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:src="@mipmap/ic_drop" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/attendece_date_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_class_rl"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_attendece_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/attendece_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/validation_ic2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_toRightOf="@+id/txt_attendece_date"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp25" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/validation_ic2"
+                    android:background="@drawable/rounded_corner_spinner_layout"
+
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinner_attendence_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:id="@+id/image_drop_down"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:src="@mipmap/ic_drop" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/dp4"
+            app:cardElevation="@dimen/dp4"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/dp20"
+            android:elevation="@dimen/dp4">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp15"
+                android:text="@string/view"
+                android:background="@drawable/side_nav_bar"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
