@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/headder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_close" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp20"
+            app:srcCompat="@drawable/appi_con" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp15"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/nav_menue_dashboard_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headder">
+
+        <ImageView
+            android:id="@+id/navigation_dashboard_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_dashboard" />
+
+        <TextView
+            android:id="@+id/navigation_dashboard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_dashboard_iv"
+            android:text="@string/Dashboard"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_My_Profile_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_menue_dashboard_rl">
+
+        <ImageView
+            android:id="@+id/navigation_My_Profile_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_my_profile" />
+
+        <TextView
+            android:id="@+id/navigation_My_Profile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_My_Profile_iv"
+            android:text="@string/My_Profile"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_institute_profile_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_My_Profile_rl">
+
+        <ImageView
+            android:id="@+id/navigation_institute_profile_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_institute_profile" />
+
+        <TextView
+            android:id="@+id/navigation_institute_profile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_institute_profile_iv"
+            android:text="@string/institute_profile"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_notifications_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_institute_profile_rl">
+
+        <ImageView
+            android:id="@+id/navigation_notifications_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_my_profile" />
+
+        <TextView
+            android:id="@+id/navigation_notifications_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_notifications_iv"
+            android:text="@string/notifications"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_fee_setup_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_notifications_rl">
+
+        <ImageView
+            android:id="@+id/navigation_fee_setup_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_fee_setup" />
+
+        <TextView
+            android:id="@+id/navigation_fee_setup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_fee_setup_iv"
+            android:text="@string/Fee_setup"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_holiday_list_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_fee_setup_rl">
+
+        <ImageView
+            android:id="@+id/navigation_holiday_list_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_holiday_list" />
+
+        <TextView
+            android:id="@+id/navigation_holiday_list_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_holiday_list_iv"
+            android:text="@string/holiday_list"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_Schedule_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_holiday_list_rl">
+
+        <ImageView
+            android:id="@+id/navigation_Schedule_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_schedule" />
+
+        <TextView
+            android:id="@+id/navigation_Schedule_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_Schedule_iv"
+            android:text="@string/Schedule"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_approvals_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_Schedule_rl">
+
+        <ImageView
+            android:id="@+id/navigation_approvals_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_approvals" />
+
+        <TextView
+            android:id="@+id/navigation_approvals_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_approvals_iv"
+            android:text="@string/approvals"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_attendece_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_approvals_rl">
+
+        <ImageView
+            android:id="@+id/navigation_attendece_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_attendence" />
+
+        <TextView
+            android:id="@+id/navigation_attendece_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_attendece_iv"
+            android:text="@string/attendece"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_class_student_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_attendece_rl">
+
+        <ImageView
+            android:id="@+id/navigation_class_student_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_class_students" />
+
+        <TextView
+            android:id="@+id/navigation_class_student_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_class_student_iv"
+            android:text="@string/class_student"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_examinations_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_class_student_rl">
+
+        <ImageView
+            android:id="@+id/navigation_examinations_iv"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/ic_examination" />
+
+        <TextView
+            android:id="@+id/navigation_examinations_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/navigation_examinations_iv"
+            android:text="@string/examinations"
+            android:textColor="@color/softblue"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

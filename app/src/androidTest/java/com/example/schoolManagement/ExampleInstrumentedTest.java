@@ -1,4 +1,4 @@
-package com.example.schoolmsapplication;
+package com.example.schoolManagement;
 
 import android.content.Context;
 
