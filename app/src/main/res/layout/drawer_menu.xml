@@ -25,11 +25,14 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="@dimen/dp50"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/dp50"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp20"
-            app:srcCompat="@drawable/appi_con" />
+            android:padding="@dimen/dp2"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginBottom="@dimen/dp20"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/splash_ic" />
 
 
         <TextView
@@ -37,6 +40,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="@dimen/dp10"
+            android:visibility="gone"
             android:text="@string/title"
             android:textColor="@color/white"
             android:textSize="@dimen/dp15"

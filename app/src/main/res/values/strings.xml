@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SchoolMSApplication</string>
+    <string name="app_name">Global Credence</string>
     <string name="title_activity_navigation_view">NavigationViewActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -24,16 +24,30 @@
     <string name="holiday_list">Holiday List</string>
     <string name="Schedule">Schedule</string>
     <string name="approvals">Approvals</string>
-    <string name="attendece">Attendece</string>
+    <string name="attendece">Attendance</string>
     <string name="class_student">Class Student</string>
     <string name="examinations">Examinations</string>
 
 
-<!--    //toggle String-->
+    <!--    //toggle String-->
 
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="select_class">Select Class</string>
     <string name="attendece_date">Attendence Date</string>
     <string name="view">View</string>
+    <string name="institute_name">Institute Name</string>
+    <string name="class_attendance">Class Attendance</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgetpassword">Forget Password ?</string>
+    <string name="createaccount">Create an Account</string>
+    <string name="passwordforget"> Forgot your password?\nEnter your email in the form below and \nwe\'ll send you instruction forceating a new one.</string>
+    <string name="username">User name</string>
+    <string name="cnfpassword">Password Confirmation</string>
+    <string name="register">Register</string>
+    <string name="loginExisituser">Login with existing account</string>
+    <string name="resetlink">Send Reset Link</string>
+    <string name="linkconfirmation">We have sent you an email with a link tto reset your password. Please check your email and click the link to countinue</string>
+    <string name="login">Login Now</string>
 </resources>

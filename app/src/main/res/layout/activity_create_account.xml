@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/loginScreen_bgcolor"
+    tools:context="com.example.schoolManagement.Ui.Activity.CreateAccountActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        app:cardElevation="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp6"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp20">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp70"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:elevation="@dimen/dp10"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/user_ic"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="@dimen/dp2" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_image"
+                android:layout_marginTop="@dimen/dp30"
+                app:boxBackgroundColor="@color/softblue"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/softblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_useremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textField_username"
+                android:layout_marginTop="@dimen/dp30"
+                app:boxBackgroundColor="@color/softblue"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/softblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_userpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textField_useremail"
+                android:layout_marginTop="@dimen/dp30"
+                app:boxBackgroundColor="@color/softblue"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/softblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField_user_cnfpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textField_userpassword"
+                android:layout_marginTop="@dimen/dp30"
+                app:boxBackgroundColor="@color/softblue"
+                app:boxBackgroundMode="none"
+                app:hintTextColor="@color/softblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/cnfpassword"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/register_btn_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textField_user_cnfpassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp10"
+                app:cardCornerRadius="@dimen/dp4"
+                app:cardElevation="@dimen/dp10"
+                app:cardUseCompatPadding="true">
+
+                <Button
+                    android:id="@+id/register_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/side_nav_bar"
+                    android:padding="10dp"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18" />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin_btn_cardview"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="@string/loginExisituser"
+        android:textColor="@color/appblue"
+        android:textSize="@dimen/sp18" />
+
+
+</LinearLayout>

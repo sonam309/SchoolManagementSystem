@@ -9,13 +9,16 @@
         android:roundIcon="@drawable/appi_con"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.schoolManagement.Ui.Activity.MainActivity">
+        <activity android:name=".Ui.Activity.CreateAccountActivity"></activity>
+        <activity android:name=".Ui.Activity.LoginActivity" />
+        <activity android:name=".Ui.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ui.Activity.MainActivity"></activity>
     </application>
 
 </manifest>

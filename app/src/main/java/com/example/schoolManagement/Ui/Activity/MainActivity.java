@@ -224,69 +224,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-//        switch (item.getItemId()) {
-//            case R.id.nav_menue_dashboard_rl:
-//
-//                replaceFragment(new DashboardFragment(), false, KeyClass.FRAGMENT_DASHBORD, KeyClass.FRAGMENT_DASHBORD);
-//                closemethod("Dashboard");
-//
-//                break;
-//
-//            case R.id.navigation_My_Profile_rl:
-//
-//                closemethod("my profile");
-//
-//                break;
-//            case R.id.navigation_institute_profile_rl:
-//
-//                closemethod("institute profile");
-//
-//                break;
-//            case R.id.navigation_notifications_rl:
-//
-//                closemethod("notifications");
-//
-//                break;
-//            case R.id.navigation_fee_setup_rl:
-//
-//                closemethod("fee setup");
-//
-//                break;
-//            case R.id.navigation_holiday_list_rl:
-//
-//                closemethod("holiday list");
-//
-//                break;
-//            case R.id.navigation_Schedule_rl:
-//
-//                closemethod("schedule");
-//
-//                break;
-//            case R.id.navigation_approvals_rl:
-//
-//                closemethod("approval");
-//
-//                break;
-//            case R.id.navigation_attendece_rl:
-//
-//                closemethod("attendence");
-//                replaceFragment(new AttendeceFragment(), true, KeyClass.FRAGMENT_ATTENDENCE, KeyClass.FRAGMENT_ATTENDENCE);
-//
-//
-//                break;
-//            case R.id.navigation_class_student_rl:
-//
-//                closemethod("class students");
-//
-//                break;
-//            case R.id.navigation_examinations_rl:
-//
-//                closemethod("Examination");
-//
-//
-//                break;
-//        }
-
         return true;
     }
 
