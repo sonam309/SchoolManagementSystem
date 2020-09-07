@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
 
 
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     compileSdkVersion 29
     buildToolsVersion "30.0.1"
@@ -61,4 +62,13 @@ dependencies {
     // library for circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    //Multidexapplication for shared prefrence
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //Firebase cloud messaging
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
 }
+
+apply plugin: 'com.google.gms.google-services'

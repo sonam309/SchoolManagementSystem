@@ -4,6 +4,13 @@ public class KeyClass {
 
     public static final String BASE_URL = "http://trueblueappworks.com/";
 
+    //Tocken
+    public static final String PRE_FCM_TOKEN = "pref_fcm_token";
+
+    public static final String RESULT_STATUS_0 = "0";
+    public static final String RESULT_STATUS_1 = "1";
+
+
 
     //    fragment string
     public static final String FRAGMENT_DASHBORD = "Dashboard Fragment";
@@ -32,4 +39,7 @@ public class KeyClass {
     public static final String DATE_MMM_dd = "MMM dd";
     public static final String DATE_MMMM_yyyy = "MMMM yyyy";
     public static final String DATE_MMM = "MMM";
+
+
+
 }

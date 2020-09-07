@@ -26,13 +26,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         bindview();
+        viewModelSetup();
         viewsetup();
 
     }
 
+
+
     private void bindview() {
 
         FragmentContainer=findViewById(R.id.FragmentContainer);
+
+
+    }
+
+    private void viewModelSetup() {
+
 
 
     }
@@ -74,4 +83,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+
+
 }
