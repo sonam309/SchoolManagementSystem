@@ -23,7 +23,7 @@ import android.widget.TextView;
 import com.example.schoolManagement.R;
 import com.example.schoolManagement.Ui.Activity.MainActivity;
 import com.example.schoolManagement.utility.KeyClass;
-import com.example.schoolManagement.utility.utils;
+import com.example.schoolManagement.utility.Utils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -91,6 +91,7 @@ public class AttendeceFragment extends Fragment implements View.OnClickListener 
 
         //button On click
         view_btn.setOnClickListener(this);
+
 
         //Relative Onclick
         attendece_datepicker_rl.setOnClickListener(this);
@@ -173,7 +174,7 @@ public class AttendeceFragment extends Fragment implements View.OnClickListener 
                         calendarSelected.set(year, monthOfYear, dayOfMonth);
 
                          attendanceDate = calendarSelected.getTime();
-                        txt_date.setText(utils.getStringFromDate(attendanceDate, KeyClass.DATE_MMM_dd));
+                        txt_date.setText(Utils.getStringFromDate(attendanceDate, KeyClass.DATE_MMM_dd));
 
 
                     }

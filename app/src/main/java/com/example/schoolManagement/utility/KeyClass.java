@@ -19,6 +19,8 @@ public class KeyClass {
     public static final String FRAGMENT_LOGIN = "Fragment Login";
     public static final String FRAGMENT_FORGET_PASSWORD="Forget password fragment";
     public static final String FRAGMENT_SEND_LINK_CONFIRMATION="send link confirmation fragment";
+    public static final String FRAGMENT_CLASS_STUDENT="Class student fragment";
+    public static final String FRAGMENT_NOTIFICATIONS="Notifications Fragment";
 
 
     //pattern & formats

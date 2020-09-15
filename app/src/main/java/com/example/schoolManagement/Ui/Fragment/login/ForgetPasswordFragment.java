@@ -6,10 +6,13 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.schoolManagement.R;
 import com.example.schoolManagement.Ui.Activity.LoginActivity;
@@ -22,6 +25,7 @@ public class ForgetPasswordFragment extends Fragment implements View.OnClickList
     private Context mctx;
     private TextInputLayout textField_forget_email;
     private Button send_link_btn;
+    private EditText txt_forget_email;
 
 
     @Override
@@ -53,6 +57,9 @@ public class ForgetPasswordFragment extends Fragment implements View.OnClickList
         //Button
         send_link_btn = mview.findViewById(R.id.send_link_btn);
 
+        //EditText
+        txt_forget_email=mview.findViewById(R.id.txt_forget_email);
+
     }
 
     private void viewModelSetup() {
@@ -71,8 +78,13 @@ public class ForgetPasswordFragment extends Fragment implements View.OnClickList
         switch (v.getId()) {
             case R.id.send_link_btn:
 
-                ((LoginActivity) getActivity()).replaceFragment(new SendLinkConfirmationFragment(), true,
-                        KeyClass.FRAGMENT_SEND_LINK_CONFIRMATION, KeyClass.FRAGMENT_SEND_LINK_CONFIRMATION);
+                if(TextUtils.isEmpty(txt_forget_email.getText().toString())){
+
+                    Toast.makeText(mctx, "Can't be empty", Toast.LENGTH_SHORT).show();
+                }else {
+                    ((LoginActivity) getActivity()).replaceFragment(new SendLinkConfirmationFragment(), true,
+                            KeyClass.FRAGMENT_SEND_LINK_CONFIRMATION, KeyClass.FRAGMENT_SEND_LINK_CONFIRMATION);
+                }
 
                 break;
         }

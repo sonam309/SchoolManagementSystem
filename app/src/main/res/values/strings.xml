@@ -50,4 +50,6 @@
     <string name="resetlink">Send Reset Link</string>
     <string name="linkconfirmation">We have sent you an email with a link tto reset your password. Please check your email and click the link to countinue</string>
     <string name="login">Login Now</string>
+    <string name="allstudent">"All Student of  "</string>
+    <string name="default_notification_channel_id">default_channel_id</string>
 </resources>

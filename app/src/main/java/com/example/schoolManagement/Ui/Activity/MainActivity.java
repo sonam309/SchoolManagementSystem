@@ -13,19 +13,20 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.schoolManagement.R;
+import com.example.schoolManagement.Ui.Fragment.ClassStudent.ClassStudentFragment;
+import com.example.schoolManagement.Ui.Fragment.Notification.NotificationsFragment;
 import com.example.schoolManagement.Ui.Fragment.attendece.AttendeceFragment;
 import com.example.schoolManagement.Ui.Fragment.DashboardFragment;
 import com.example.schoolManagement.utility.KeyClass;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements  View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     public static FrameLayout container;
     public static Context context;
@@ -86,10 +87,10 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     private void viewSetup() {
 
         //fullscree
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //switchFragment
-        replaceFragment(new AttendeceFragment(), false, KeyClass.FRAGMENT_ATTENDENCE, KeyClass.FRAGMENT_ATTENDENCE);
+        replaceFragment(new ClassStudentFragment(), false, KeyClass.FRAGMENT_ATTENDENCE, KeyClass.FRAGMENT_ATTENDENCE);
 
         //RelativeLayout On click
         nav_menue_dashboard_rl.setOnClickListener(this);
@@ -168,6 +169,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 break;
             case R.id.navigation_notifications_rl:
 
+                replaceFragment(new NotificationsFragment(), false, KeyClass.FRAGMENT_NOTIFICATIONS, KeyClass.FRAGMENT_NOTIFICATIONS);
+
                 closemethod("notifications");
 
                 break;
@@ -200,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 break;
             case R.id.navigation_class_student_rl:
 
+                replaceFragment(new ClassStudentFragment(), true, KeyClass.FRAGMENT_CLASS_STUDENT, KeyClass.FRAGMENT_CLASS_STUDENT);
                 closemethod("class students");
 
                 break;

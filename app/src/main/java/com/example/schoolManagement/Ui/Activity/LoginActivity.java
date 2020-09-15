@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
 import com.example.schoolManagement.R;
 import com.example.schoolManagement.Ui.Fragment.login.LoginFragment;
 import com.example.schoolManagement.utility.KeyClass;
-import com.example.schoolManagement.utility.constant;
+import com.example.schoolManagement.utility.Constant;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     public static FrameLayout FragmentContainer;
@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         LoginFragment loginFragment = new LoginFragment();
         if (getIntent().getExtras()!=null){
             Bundle b=new Bundle();
-            b.putString(constant.StringConstants.DATA,getIntent().getExtras().getString(constant.StringConstants.DATA));
+            b.putString(Constant.StringConstants.DATA,getIntent().getExtras().getString(Constant.StringConstants.DATA));
             loginFragment.setArguments(b);
         }
         replaceFragment(loginFragment, false, KeyClass.FRAGMENT_LOGIN, KeyClass.FRAGMENT_LOGIN);

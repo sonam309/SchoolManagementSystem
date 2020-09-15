@@ -5,9 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class User extends ResultState {
 
-    @SerializedName("token")
-    @Expose
-    private String tocken;
 
     @SerializedName("username")
     @Expose
@@ -38,26 +35,21 @@ public class User extends ResultState {
         super.setMessage(message);
     }
 
-    @Override
-    public String getToken() {
-        return super.getToken();
+
+    public String getUserName() {
+        return userName;
     }
 
-    @Override
-    public void setToken(String token) {
-        super.setToken(token);
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public User(String tocken) {
-        this.tocken = tocken;
+    public String getPassword() {
+        return password;
     }
 
-    public String getTocken() {
-        return tocken;
-    }
-
-    public void setTocken(String tocken) {
-        this.tocken = tocken;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
 

@@ -16,6 +16,8 @@
     <color name="spinner_blue">#add8e6</color>
     <color name="spinner_border">#c5d4f1</color>
     <color name="loginScreen_bgcolor">#ececec</color>
+    <color name="lightgrey">#979595</color>
+    <color name="darkgrey">#404040</color>
 
 
 

@@ -1,4 +1,4 @@
-package com.example.schoolManagement;
+package com.example.schoolManagement.utility;
 
 import android.app.Activity;
 
@@ -6,12 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
-import androidx.lifecycle.ProcessLifecycleOwner;
 import androidx.multidex.MultiDexApplication;
 
-import com.example.schoolManagement.utility.PreferenceData;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -27,20 +24,20 @@ public class prefrenceShared extends MultiDexApplication implements LifecycleObs
     @Override
     public void onCreate() {
         super.onCreate();
-        initApplication();
+//        initApplication();
     }
 
-    private void initApplication() {
-        if (prefrenceSharedInstance == null) {
-            ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
-            prefrenceSharedInstance = this;
-            preferenceData = new PreferenceData(getApplicationContext());
-            // Obtain the FirebaseAnalytics instance.
-            firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-            firebaseAnalytics.setAnalyticsCollectionEnabled(BuildConfig.ANALYTICS);
-            FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-        }
-    }
+//    private void initApplication() {
+//        if (prefrenceSharedInstance == null) {
+//            ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
+//            prefrenceSharedInstance = this;
+//            preferenceData = new PreferenceData(getApplicationContext());
+//            // Obtain the FirebaseAnalytics instance.
+//            firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+//            firebaseAnalytics.setAnalyticsCollectionEnabled(BuildConfig.ANALYTICS);
+//            FirebaseMessaging.getInstance().setAutoInitEnabled(true);
+//        }
+//    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     void onAppForegrounded() {

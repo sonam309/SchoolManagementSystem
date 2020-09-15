@@ -11,11 +11,11 @@
         android:id="@+id/main_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp60"
         android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp60"
         android:layout_marginRight="@dimen/dp10"
-        app:cardElevation="@dimen/dp10"
         app:cardCornerRadius="@dimen/dp6"
+        app:cardElevation="@dimen/dp10"
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
@@ -46,7 +46,8 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/user_email_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
@@ -65,12 +66,13 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/user_password_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:imeOptions="actionNext"
-                    android:inputType="textNoSuggestions" />
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -13,14 +13,10 @@ public class Login extends ResultState {
     @Expose
     private String password;
 
-    @SerializedName("tocken")
-    @Expose
-    private String tocken;
-
-    public Login(String userName, String password, String tocken) {
+    public Login(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.tocken = tocken;
+
     }
 
     public String getUserName() {
@@ -39,13 +35,6 @@ public class Login extends ResultState {
         this.password = password;
     }
 
-    public String getTocken() {
-        return tocken;
-    }
-
-    public void setTocken(String tocken) {
-        this.tocken = tocken;
-    }
 
 
 }

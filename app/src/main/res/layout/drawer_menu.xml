@@ -143,7 +143,7 @@
             android:layout_centerVertical="true"
             android:layout_margin="10dp"
             android:padding="@dimen/dp5"
-            android:src="@drawable/ic_my_profile" />
+            android:src="@drawable/ic_notification" />
 
         <TextView
             android:id="@+id/navigation_notifications_tv"

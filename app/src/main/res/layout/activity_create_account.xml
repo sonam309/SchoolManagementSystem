@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/loginScreen_bgcolor"
+    android:orientation="vertical"
     tools:context="com.example.schoolManagement.Ui.Activity.CreateAccountActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/main_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp20"
         android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
         android:layout_marginRight="@dimen/dp10"
-        app:cardElevation="@dimen/dp10"
         app:cardCornerRadius="@dimen/dp6"
+        app:cardElevation="@dimen/dp10"
         app:cardUseCompatPadding="true">
 
 
@@ -48,7 +48,8 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/txt_username_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/username"
@@ -68,7 +69,8 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/txt_user_email_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
@@ -88,7 +90,8 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/txt_user_password_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -108,11 +111,13 @@
                 app:boxBackgroundMode="none"
                 app:hintTextColor="@color/softblue">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/txt_user_cnf_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/cnfpassword"
-                    android:imeOptions="actionNext"
+                    android:imeOptions="actionDone"
+                    android:lines="1"
                     android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -141,10 +146,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp18" />
             </androidx.cardview.widget.CardView>
-
-
-
-
 
         </RelativeLayout>
 

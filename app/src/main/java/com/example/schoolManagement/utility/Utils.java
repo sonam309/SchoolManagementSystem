@@ -1,14 +1,17 @@
 package com.example.schoolManagement.utility;
 
+import android.content.Context;
+import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 
-import com.example.schoolManagement.prefrenceShared;
+import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class utils {
+public class Utils {
 
 
     public static String getStringFromDate(@NonNull Date date, @NonNull String formatString) {
@@ -24,4 +27,7 @@ public class utils {
 
     }
 
+    public static void loadImage(ImageView imageView, Context context, String profilePic) {
+        Glide.with(context).load(KeyClass.BASE_URL.substring(0,KeyClass.BASE_URL.length()-1)+profilePic).into(imageView);
+    }
 }
